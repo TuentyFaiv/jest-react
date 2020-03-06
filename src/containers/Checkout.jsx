@@ -20,8 +20,8 @@ const Checkout = (props) => {
     <div className="Checkout">
       <div className="Checkout-content">
         {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h2>Sin Pedidos</h2>}
-        {cart.map(item => (
-          <div className="Checkout-item" key={item.title}>
+        {cart.map((item, index) => (
+          <div className="Checkout-item" key={index}>
             <div className="Checkout-element">
               <h4>{item.title}</h4>
               <span>
@@ -31,7 +31,7 @@ const Checkout = (props) => {
             </div>
             <button
               type="button"
-              onClick={remove(item)}
+              onClick={remove(index)}
             >
               <i className="fas fa-trash-alt" />
             </button>
