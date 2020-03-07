@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    publicPath: '/jest-react'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -42,6 +43,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
+    publicPath: '/jest-react'
   },
   plugins: [
     new HtmlWebPackPlugin({
